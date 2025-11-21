@@ -8,18 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var lblCounter: UILabel!
-    var counter: Int = 0
+    @IBOutlet weak var counterLabel: UILabel!
+    let constante = "hola"
+    var counter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .red
+        view.backgroundColor = .red
+        counterLabel.textColor = .white
         // Do any additional setup after loading the view.
     }
+
     @IBAction func increaseAction(_ sender: Any) {
         counter += 1
-        print("Hola \(counter)")
-        lblCounter.text = "\(counter)"
+        counterLabel.text = "\(counter)"
+        print("increaseAction")
     }
 }
 
