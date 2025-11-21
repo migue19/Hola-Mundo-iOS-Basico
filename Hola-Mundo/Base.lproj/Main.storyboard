@@ -15,35 +15,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1e-5w-DVg">
-                                <rect key="frame" x="141.66666666666666" y="408.66666666666669" width="109.66666666666666" height="35"/>
-                                <color key="tintColor" red="0.67962741496254586" green="1" blue="0.95696094393609177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Incrementa"/>
-                                <connections>
-                                    <action selector="increaseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fs6-8y-DIZ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-KT-tjQ">
-                                <rect key="frame" x="191" y="371.66666666666669" width="11" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                        <constraints>
-                            <constraint firstItem="F1e-5w-DVg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N4w-6q-bsx"/>
-                            <constraint firstItem="F1e-5w-DVg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tfx-df-Mt9"/>
-                            <constraint firstItem="hAm-KT-tjQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d96-18-l9e"/>
-                            <constraint firstItem="F1e-5w-DVg" firstAttribute="top" secondItem="hAm-KT-tjQ" secondAttribute="bottom" constant="16" id="kmB-AS-8pb"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="counterLabel" destination="hAm-KT-tjQ" id="MHu-2m-oho"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

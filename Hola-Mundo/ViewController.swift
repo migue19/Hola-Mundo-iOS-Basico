@@ -8,21 +8,43 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var counterLabel: UILabel!
-    let constante = "hola"
     var counter = 0
+    lazy var increaseLabel: UILabel = {
+        let label = UILabel()
+        label.text = "0"
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    lazy var increaseButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Increase", for: .normal)
+        button.addTarget(self, action: #selector(increase), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
-        counterLabel.textColor = .white
-        // Do any additional setup after loading the view.
+        view.addSubview(increaseButton)
+        view.addSubview(increaseLabel)
+        NSLayoutConstraint.activate([
+            increaseButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            increaseButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            increaseLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            increaseLabel.bottomAnchor.constraint(equalTo: increaseButton.topAnchor, constant: -15)
+        ])
+        
+    }
+    
+    @objc func increase() {
+        counter += 1
+        increaseLabel.text = "\(counter)"
+        //print("Increase Action")
     }
 
-    @IBAction func increaseAction(_ sender: Any) {
-        counter += 1
-        counterLabel.text = "\(counter)"
-        print("increaseAction")
-    }
 }
 
